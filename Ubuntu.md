@@ -2,5 +2,5 @@
 
 ### Commands
 ```
-sudo chown -R $USER:$USER . // allow logged user to save files
+sudo chown -R $USER:$USER . # allow logged user to save files
 ```

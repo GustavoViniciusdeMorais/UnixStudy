@@ -10,3 +10,7 @@ Add the identity: ssh-add /root/.ssh/id_user
 
 test connection ssh -T git@github.com
 ```
+```sh
+git config --global user.name "Your Name"
+git config --global user.email "youremail@yourdomain.com"
+```

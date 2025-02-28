@@ -11,3 +11,10 @@ usermod -g web rd2d
 
 groups rd2d
 ```
+### Change file group
+```sh
+touch text.txt
+ls -lh text.txt
+chown :web text.txt
+ls -lh text.txt
+```

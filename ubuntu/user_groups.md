@@ -18,3 +18,8 @@ ls -lh text.txt
 chown :web text.txt
 ls -lh text.txt
 ```
+### Delete user
+```sh
+userdel [username] -r
+history 10
+```

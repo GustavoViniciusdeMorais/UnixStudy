@@ -20,6 +20,7 @@ ls -lh text.txt
 ```
 ### Delete user
 ```sh
+# -r delete home directory
 userdel [username] -r
 history 10
 ```

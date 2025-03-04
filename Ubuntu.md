@@ -12,3 +12,8 @@ sudo chown -R $USER:$USER .
 ```sh
 sudo grep -iR "needle" path/
 ```
+### Manage services start at boot
+```sh
+systemctl list-unit-files | grep ollama
+systemctl disable ollama.service
+```

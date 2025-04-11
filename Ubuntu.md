@@ -17,3 +17,9 @@ sudo grep -iR "needle" path/
 systemctl list-unit-files | grep ollama
 systemctl disable ollama.service
 ```
+### Hardware infos
+```sh
+cat /proc/cpuinfo | head
+free -lh
+df -H
+```

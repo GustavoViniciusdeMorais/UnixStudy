@@ -2,7 +2,7 @@
 
 - [UserGroups](./ubuntu/user_groups.md)
 - [CronJob](./ubuntu/cronjob.md)
-- [Ssh](./ubuntu/ssh.md)
+- [Ssh agent client](./ubuntu/ssh.md)
 
 ### Add current user permission to files in the folder
 ```sh

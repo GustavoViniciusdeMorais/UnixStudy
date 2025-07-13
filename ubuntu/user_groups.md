@@ -24,3 +24,11 @@ ls -lh text.txt
 userdel [username] -r
 history 10
 ```
+### Mod user
+```bash
+tail -n 3 /etc/passwd
+usermod -c "test" -g root r2d2
+groupadd ninjas
+tail -n 3 /etc/group
+usermod -c "star wars" -g ninjas -G root r2d2
+```

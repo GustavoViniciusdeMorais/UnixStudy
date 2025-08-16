@@ -5,6 +5,7 @@
 - [Files and Directories](./ubuntu/files_directories.md)
 - [Ssh agent client](./ubuntu/ssh.md)
 - [Process Management](./ubuntu/process_management.md)
+- [Alias commands](./ubuntu/alias.md)
 
 ### Add current user permission to files in the folder
 ```sh

@@ -26,3 +26,8 @@ cat /proc/cpuinfo | head
 free -lh
 df -H
 ```
+### tar zip unzip
+```bash
+tar -cvf hacking_current.tar --exclude='vendor' ../Studies/Hacking/*
+tar -xvf hacking_current.tar # extract
+```

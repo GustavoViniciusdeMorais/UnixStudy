@@ -4,6 +4,11 @@
 ```
 r = 4, w = 2, x = 1
 ```
+### change mode
+```bash
+chmod u=rwx,g=rx,o= start_ssh.sh
+ls -lh start_ssh.sh
+```
 ### mod access
 ```bash
 mkdir ninjas && cd ninjas

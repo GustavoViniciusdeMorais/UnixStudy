@@ -37,3 +37,7 @@ chgrp ninjas list.ninjas
 
 ls -lh --color
 ```
+### wget
+```bash
+wget -o image.jpg [url]
+```

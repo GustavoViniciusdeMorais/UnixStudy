@@ -11,6 +11,13 @@ usermod -g web rd2d
 
 groups rd2d
 ```
+### System account
+```bash
+mkdir /opt/gustavo
+useradd -r -g root -d /opt/gustavo/ -s /bin/false gussystem -u 97
+tail -1 /etc/passwd
+userdel gussystem -r
+```
 ### Change file group
 ```sh
 touch text.txt

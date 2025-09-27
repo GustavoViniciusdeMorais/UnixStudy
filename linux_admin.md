@@ -31,3 +31,8 @@ df -H
 tar -cvf hacking_current.tar --exclude='vendor' ../Studies/Hacking/*
 tar -xvf hacking_current.tar # extract
 ```
+### Nice letters
+```bash
+apt install figlet -y
+figlet LINUX
+```

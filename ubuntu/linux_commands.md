@@ -1,4 +1,9 @@
 # Linux Commands
+### Dump file write real time
+```bash
+tail -f echo_file.txt
+echo "test 1" >> echo_file.txt
+```
 ### List Open Files
 ```bash
 lsof -i :80 | grep root

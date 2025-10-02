@@ -4,6 +4,10 @@
 tail -f echo_file.txt
 echo "test 1" >> echo_file.txt
 ```
+### Find
+```bash
+find /etc -name "php"
+```
 ### List Open Files
 ```bash
 lsof -i :80 | grep root

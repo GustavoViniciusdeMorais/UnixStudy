@@ -4,7 +4,7 @@
 tail -f echo_file.txt
 echo "test 1" >> echo_file.txt
 # netcat example
-nc -vl 1234 >> nc.txt &
+nc -vl 4005 >> nc.txt &
 tail -f nc.txt
 nc -v localhost 1234
 php

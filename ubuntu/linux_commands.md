@@ -6,7 +6,7 @@ echo "test 1" >> echo_file.txt
 # netcat example
 nc -vl 4005 >> nc.txt &
 tail -f nc.txt
-nc -v localhost 1234
+nc -v localhost 4005
 php
 ```
 ### Find

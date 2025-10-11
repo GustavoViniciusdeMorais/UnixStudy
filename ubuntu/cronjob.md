@@ -29,3 +29,10 @@ Check for log
 ```sh
 grep CRON /var/log/syslog
 ```
+
+Run bash from a file
+```bash
+nano simple.sh
+ln -s /home/gustavo/simple.sh /usr/bin/simplesh
+simplesh # in crontab
+```

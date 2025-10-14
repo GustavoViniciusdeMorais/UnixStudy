@@ -13,6 +13,12 @@ php
 ```bash
 find /etc -name "php"
 ```
+### AWK Coding and piping
+```bash
+echo "LINUX" | figlet $1
+alias | grep my
+echo "abcdef" | awk '{print length($1)}'
+```
 ### List Open Files
 ```bash
 lsof -i :80 | grep root

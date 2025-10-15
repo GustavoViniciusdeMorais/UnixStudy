@@ -18,6 +18,7 @@ find /etc -name "php"
 echo "LINUX" | figlet $1
 alias | grep my
 echo "abcdef" | awk '{print length($1)}'
+echo "test" | awk '{if (length($1) > 2) print $1}'
 ```
 ### List Open Files
 ```bash

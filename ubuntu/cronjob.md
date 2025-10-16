@@ -33,6 +33,7 @@ grep CRON /var/log/syslog
 Run bash from a file
 ```bash
 nano simple.sh
+# must be complete path
 ln -s /home/gustavo/simple.sh /usr/bin/simplesh
 simplesh # in crontab
 ```

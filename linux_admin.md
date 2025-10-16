@@ -37,3 +37,8 @@ tar -xvf hacking_current.tar # extract
 apt install figlet -y
 figlet LINUX
 ```
+### Color cli
+```bash
+echo -e "\e[34m" # colors ansi code
+# echo -e "\e[0m" # reset
+```

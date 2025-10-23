@@ -13,6 +13,10 @@ php
 ```bash
 find /etc -name "php"
 ```
+### CLI Coding
+```bash
+php -r "print_r(strlen('linux'));" && echo ""
+```
 ### AWK Coding and piping
 ```bash
 echo "LINUX" | figlet $1

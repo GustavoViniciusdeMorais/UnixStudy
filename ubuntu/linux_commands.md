@@ -24,10 +24,6 @@ alias | grep my
 echo "abcdef" | awk '{print length($1)}'
 echo "test" | awk '{if (length($1) > 2) print $1}'
 ```
-### List Open Files
-```bash
-lsof -i :80 | grep root
-```
 ### Systemctl
 ```bash
 systemctl status nginx
@@ -38,6 +34,13 @@ systemctl stop nginx
 ```bash
 uptime
 ```
+### JSON
+```bash
+apt install jq -y
+nano ninja.json
+cat ninja.json | jq .
+cat ninja.json | jq -c .
+```
 ### Top
 ```bash
 top
@@ -47,4 +50,8 @@ Ctrl L # to search string
 ### Socket Statistics
 ```bash
 ss -ntlp
+```
+### List Open Files
+```bash
+lsof -i :80 | grep root
 ```

@@ -24,6 +24,13 @@ alias | grep my
 echo "abcdef" | awk '{print length($1)}'
 echo "test" | awk '{if (length($1) > 2) print $1}'
 ```
+### Tips
+```bash
+cat rock.txt | grep [at] | sort -r
+[ ! -d backup1 ] && echo "dir not exists"
+ose="kali linux"
+ echo ${ose:0:3}
+```
 ### Systemctl
 ```bash
 systemctl status nginx

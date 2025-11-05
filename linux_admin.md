@@ -7,7 +7,7 @@
 - [Process Management](./ubuntu/process_management.md)
 - [Alias commands](./ubuntu/alias.md)
 - [Admin tips](./ubuntu/linux_commands.md)
-- [Networking](./networking.md)
+- [Networking](./ubuntu/networking.md)
 
 ### Add current user permission to files in the folder
 ```sh

@@ -8,6 +8,7 @@ ftp [ip] [port]
 tracepath -b -n -l 1 [host]
 traceroute -q 1 -n [host]
 ss -ntlp
+nmap -v -sV -T5 -p 21,22,80 [host]
 ```
 ### Tunneling
 ```bash

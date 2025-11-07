@@ -1,4 +1,13 @@
 ## Networking
+### Basics
+```bash
+apt install net-tools traceroute -y
+ping -c 2 [ip]
+telnet [ip] [port]
+ftp [ip] [port]
+tracepath -b -n -l 1 [host]
+traceroute -q 1 -n [host]
+```
 ### Tunneling
 ```bash
 nc -vlnp 4444

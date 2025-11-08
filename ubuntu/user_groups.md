@@ -23,6 +23,7 @@ userdel gussystem -r
 touch text.txt
 ls -lh text.txt
 chown :web text.txt
+chgrp web text.txt
 ls -lh text.txt
 ```
 ### Delete user

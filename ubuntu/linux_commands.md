@@ -37,6 +37,18 @@ systemctl status nginx
 systemctl disable nginx
 systemctl stop nginx
 ```
+### Optmize
+```bash
+apt update && apt upgrade -y
+apt list --installed
+apt remove package
+apt purge package
+apt autoremove
+apt clean
+journalctl --vacuum-time=2weeks
+df -h
+du -sh /home/gustavo/* | sort -h
+```
 ### Uptime
 ```bash
 uptime

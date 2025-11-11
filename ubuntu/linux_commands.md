@@ -11,7 +11,8 @@ php
 ```
 ### Find
 ```bash
-find /etc -name "php"
+# 2>/dev/null for no error output
+find / -name "php.ini" 2>/dev/null
 ```
 ### CLI Coding
 ```bash
@@ -48,6 +49,9 @@ apt clean
 journalctl --vacuum-time=2weeks
 df -h
 du -sh /home/gustavo/* | sort -h
+systemctl list-unit-files --state=enabled
+systemctl --type=service --state=running
+ps aux --sort=-%mem | head -n 5
 ```
 ### Uptime
 ```bash

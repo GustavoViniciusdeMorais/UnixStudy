@@ -15,6 +15,11 @@ php
 find / -name "php.ini" 2>/dev/null
 find / -type f -name php.ini -exec cat {} \; | head -n 5 2>/dev/null
 ```
+### Sed
+```bash
+# -i.bkp is for backup, 2 is for sec line, g is for global
+sed -i.bkp '2s/kali/parrot/g' rock.txt
+```
 ### CLI Coding
 ```bash
 php -r "print_r(strlen('linux'));" && echo ""

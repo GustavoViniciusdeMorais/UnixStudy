@@ -59,6 +59,16 @@ systemctl list-unit-files --state=enabled
 systemctl --type=service --state=running
 ps aux --sort=-%mem | head -n 5
 ```
+### Env Variables
+```bash
+nano /etc/environment
+OSE='kali'
+# open new terminal
+echo $OSE;
+printenv OSE
+export OSE='parrot'
+unset OSE
+```
 ### Uptime
 ```bash
 uptime

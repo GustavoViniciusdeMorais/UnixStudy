@@ -32,6 +32,7 @@ df -H
 ```bash
 tar -cvf hacking_current.tar --exclude='vendor' ../Studies/Hacking/*
 tar -xvf hacking_current.tar # extract
+tar -t -f site.tar # show tar contents
 ```
 ### Nice letters
 ```bash

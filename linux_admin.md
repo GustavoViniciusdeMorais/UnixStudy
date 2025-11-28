@@ -33,6 +33,7 @@ df -H
 tar -cvf hacking_current.tar --exclude='vendor' ../Studies/Hacking/*
 tar -xvf hacking_current.tar # extract
 tar -t -f site.tar # show tar contents
+tar -x -O -f images/parrot_2.tar manifest.json | jq .
 ```
 ### Nice letters
 ```bash

@@ -10,3 +10,9 @@ uptime
 
 !u
 ```
+### modify string with tr
+```bash
+echo $PATH | tr ':' '\n'
+echo "abc" | tr 'a' 'x'
+echo "abc" | tr [:lower:] [:upper:]
+```

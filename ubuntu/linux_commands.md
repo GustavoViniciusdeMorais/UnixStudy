@@ -36,7 +36,8 @@ echo "test" | awk '{if (length($1) > 2) print $1}'
 cat rock.txt | grep [at] | sort -r
 [ ! -d backup1 ] && echo "dir not exists"
 ose="kali linux"
- echo ${ose:0:3}
+echo ${ose:0:3}
+wc -l public/index.php # word count
 ```
 ### Systemctl
 ```bash

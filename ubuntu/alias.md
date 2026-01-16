@@ -14,3 +14,9 @@ tlp
 
 alias
 ```
+### Usefulls
+```bash
+alias mybranch='git branch --show-current'
+alias myhtml='cd /var/www/html'
+alias myowner='chown -R gustavo:gustavo ./'
+```

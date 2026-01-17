@@ -16,3 +16,9 @@ echo $PATH | tr ':' '\n'
 echo "abc" | tr 'a' 'x'
 echo "abc" | tr [:lower:] [:upper:]
 ```
+### files diff
+```bash
+echo "linux" > test1.txt
+echo "php" > test2.txt
+diff test1.txt test2.txt
+```

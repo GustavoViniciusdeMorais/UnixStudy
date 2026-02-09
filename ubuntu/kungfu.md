@@ -9,6 +9,10 @@ echo "dev ops" | awk '{print $2}'
 uptime
 
 !u
+
+echo "dev ops linux" | cut -d' ' -f2
+
+echo "dev ops linux" | tr "ops" "abc"
 ```
 ### modify string with tr
 ```bash

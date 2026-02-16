@@ -15,6 +15,8 @@ echo "dev ops linux" | cut -d' ' -f2
 echo "dev ops linux" | tr "ops" "abc"
 
 df -mt ext4 | awk '{sum += $3} END {print sum}'
+
+du -s /home/* | sort -n | head -3
 ```
 ### modify string with tr
 ```bash

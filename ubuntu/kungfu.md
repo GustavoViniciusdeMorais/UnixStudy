@@ -17,6 +17,9 @@ echo "dev ops linux" | tr "ops" "abc"
 df -mt ext4 | awk '{sum += $3} END {print sum}'
 
 du -s /home/* | sort -n | head -3
+
+# r is for reverse, 4 is the number of the column
+ps aux | sort -nrk 4 | head -4
 ```
 ### modify string with tr
 ```bash

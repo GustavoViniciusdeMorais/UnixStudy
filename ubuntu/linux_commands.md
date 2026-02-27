@@ -1,4 +1,12 @@
 # Linux Commands
+### Find
+```bash
+# 2>/dev/null for no error output
+find / -name "php.ini" 2>/dev/null
+find / -type f -name php.ini -exec cat {} \; | head -n 5 2>/dev/null
+grep -in 'word.*' $filepath # . is any char and * is as many
+ls -lh api/app/controllers/* | grep -i 'user.*'
+```
 ### Dump file write real time
 ```bash
 tail -f echo_file.txt
@@ -8,14 +16,6 @@ nc -vl 4005 >> nc.txt &
 tail -f nc.txt
 nc -v localhost 4005
 php
-```
-### Find
-```bash
-# 2>/dev/null for no error output
-find / -name "php.ini" 2>/dev/null
-find / -type f -name php.ini -exec cat {} \; | head -n 5 2>/dev/null
-grep -in 'word.*' $filepath # . is any char and * is as many
-ls -lh api/app/controllers/* | grep -i 'user.*'
 ```
 ### Sed
 ```bash

@@ -64,6 +64,7 @@ ps aux --sort=-%mem | head -n 5
 ```bash
 nano /etc/environment
 OSE='kali'
+MYVAR="/var/www/html"
 # open new terminal
 echo $OSE;
 printenv OSE

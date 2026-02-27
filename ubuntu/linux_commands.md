@@ -14,6 +14,7 @@ php
 # 2>/dev/null for no error output
 find / -name "php.ini" 2>/dev/null
 find / -type f -name php.ini -exec cat {} \; | head -n 5 2>/dev/null
+grep -in 'word.*' $filepath # . is any char and * is as many
 ```
 ### Sed
 ```bash

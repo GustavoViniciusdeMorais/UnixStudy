@@ -15,6 +15,7 @@ php
 find / -name "php.ini" 2>/dev/null
 find / -type f -name php.ini -exec cat {} \; | head -n 5 2>/dev/null
 grep -in 'word.*' $filepath # . is any char and * is as many
+ls -lh api/app/controllers/* | grep -i 'user.*'
 ```
 ### Sed
 ```bash

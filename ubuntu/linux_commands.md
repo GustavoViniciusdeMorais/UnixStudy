@@ -92,7 +92,7 @@ Ctrl L # to search string
 ```
 ### Socket Statistics
 ```bash
-ss -ntlp
+ss -ntlp | grep ssh
 ```
 ### List Open Files
 ```bash

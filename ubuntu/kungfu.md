@@ -1,5 +1,8 @@
 # Kung Fu Tips
 ```bash
+grep -in '.*product.*' $(grep -rl luser src/)
+```
+```bash
 awk -F: '{print $1,$NF}' /etc/passwd | sort | column -t
 
 history | awk '{print $2}' | sort | uniq -c | sort -rn | tail -5

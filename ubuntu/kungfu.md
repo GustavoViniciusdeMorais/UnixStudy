@@ -1,6 +1,6 @@
 # Kung Fu Tips
 ```bash
-grep -in '.*product.*' $(grep -rl luser src/)
+grep -in '.*product.*' $(grep -rl product src/)
 ```
 ```bash
 awk -F: '{print $1,$NF}' /etc/passwd | sort | column -t

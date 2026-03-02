@@ -99,3 +99,15 @@ ss -ntlp | grep ssh
 ```bash
 lsof -i :80 | grep root
 ```
+### Daily Git
+```bash
+git status
+git stash save debug
+git restore .
+git checkout master
+git pull
+git branch -r | grep [branch-name]
+git checkout -b [branch-name] origin/[branch-name]
+git stash apply --index 0
+chown -R gustavo:gustavo ./
+```

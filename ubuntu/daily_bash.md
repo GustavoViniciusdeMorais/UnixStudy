@@ -1,0 +1,45 @@
+# Daily Bash Linux CLI
+
+```bash
+mkdir api
+cd api
+touch index.php
+chown -R gustavo:gustavo ./
+chmod u+x index.php
+
+tree .
+ls -lh ./ | head -3
+
+grep -in 'word.*' $filepath # . is any char and * is as many
+grep -in '.*product.*' $(grep -rl product src/)
+ls -lh api/src/controllers/* | grep -i 'user.*'
+
+ssh-keygen -t ed25519 -C "gustavo@email.com"
+eval "$(ssh-agent -s)"
+ssh-add /root/.ssh/id_hack
+ssh-add -l # list the loaded key by the agent
+ssh-add -D
+ssh gustavo@[ip] -p [port]
+
+wc -l src/api.php
+
+ss -ntlp | grep ssh
+
+php process.php >> debut.txt &
+jobs
+kill -9 %1
+
+alias | grep my
+
+tail -f debut.txt
+
+free -lh
+
+ps aux | sort -nrk 4 | head -4
+
+df -h | head -5
+du -sh /home/gustavo/* | sort -rnk 1 | head -2
+
+[ ! -d backup1 ] && echo "dir not exists" || echo "is dir"
+
+```

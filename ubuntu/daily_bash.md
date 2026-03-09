@@ -25,13 +25,13 @@ wc -l src/api.php
 
 ss -ntlp | grep ssh
 
-php process.php >> debut.txt &
+php process.php >> debug.txt &
 jobs
 kill -9 %1
 
-alias | grep my
+tail -f debug.txt
 
-tail -f debut.txt
+alias | grep my
 
 free -lh
 

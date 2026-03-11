@@ -36,3 +36,24 @@ echo "linux" > test1.txt
 echo "php" > test2.txt
 diff test1.txt test2.txt
 ```
+### search text in files of dir
+./search.sh /path/to/directory "text to search"
+```bash
+#!/bin/bash
+
+dir="$1"
+text="$2"
+
+for file in "$dir"/*
+do
+  if [ -f "$file" ]; then
+    search=$(grep -in "$text" "$file" 2>/dev/null)
+    if [ -n "$search" ]; then
+      echo "Checking: $file"
+      ls -lhs "$file"
+      echo "$search"
+      echo "---"
+    fi
+  fi
+done
+```

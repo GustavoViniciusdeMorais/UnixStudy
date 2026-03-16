@@ -24,6 +24,8 @@ ssh gustavo@[ip] -p [port]
 
 wc -l src/api.php
 
+cat api.php | awk 'NR==3' | awk '{print $2}'
+
 ss -ntlp | grep ssh
 
 php process.php >> debug.txt &

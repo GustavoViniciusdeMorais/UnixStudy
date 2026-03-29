@@ -1,5 +1,6 @@
 # Linux Admin
 
+- [Daily Bash](./ubuntu/daily_bash.md)
 - [UserGroups](./ubuntu/user_groups.md)
 - [CronJob](./ubuntu/cronjob.md)
 - [Files and Directories](./ubuntu/files_directories.md)

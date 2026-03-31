@@ -95,10 +95,6 @@ Ctrl L # to search string
 ```bash
 ss -ntlp | grep ssh
 ```
-### List Open Files
-```bash
-lsof -i :80 | grep root
-```
 ### Daily Git
 ```bash
 git status
@@ -110,4 +106,18 @@ git branch -r | grep [branch-name]
 git checkout -b [branch-name] origin/[branch-name]
 git stash apply --index 0
 chown -R gustavo:gustavo ./
+```
+### Linux stdin out error
+stdin 0, stdout 1, stderr 2
+```bash  
+read usertext; echo $usertext;
+
+# gets error and moves to stdin
+ls /unexistingdirectory 2>&1
+
+ls /unexistingdirectory 2> errors.txt
+
+cat file.txt | grep 'text' | sort > sorted_results.txt
+
+diff <(cat rock.txt) <(ls -lh)
 ```

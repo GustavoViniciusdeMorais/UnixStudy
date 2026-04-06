@@ -26,5 +26,8 @@ systemctl # tab twice
 # relative path starts from current folder or ../
 ls -alh /usr/ # absolut path begins with /
 
+cd - # without arguments goes to home user
+touch file.md
+
 mkdir mydir
 ```

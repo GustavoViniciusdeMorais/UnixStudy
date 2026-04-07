@@ -30,4 +30,20 @@ cd - # without arguments goes to home user
 touch file.md
 
 mkdir mydir
+
+cp [source] [destination]
+
+cp -r source/* dest/
+
+mv [source] [destination]
+
+rm [object]
+
+rm -r dir/
+
+stat file.md
+
+# hard link, points to existing file
+ln dir1/file.md dir2/file.md
+
 ```

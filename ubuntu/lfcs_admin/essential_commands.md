@@ -43,7 +43,18 @@ rm -r dir/
 
 stat file.md
 
-# hard link, points to existing file
+# hard link, points to the inod of existing file
+# hard link only in the same filesystem
+# only to files, not allowed for dirs
 ln dir1/file.md dir2/file.md
+
+# soft link is a file which content is the path to the other file
+# soft link with relative path do not break as long it points to same dir
+# soft link can be done to dirs and different file systems
+ln -s test.sh testl2.sh
+readlink testl2.sh
+
+addgroup ninjas
+chgrp ninjas test.sh
 
 ```

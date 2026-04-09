@@ -56,5 +56,11 @@ readlink testl2.sh
 
 addgroup ninjas
 chgrp ninjas test.sh
+chgrp gustavo:ninjas test.sh
+
+# file dir permissinos r w x, 4 2 1
+# if the logged user has just read, the group permission wont apply
+# if the logged is not the owner but is from group, it will be able to write
+# r--rw----
 
 ```

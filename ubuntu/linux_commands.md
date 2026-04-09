@@ -121,3 +121,16 @@ cat file.txt | grep 'text' | sort > sorted_results.txt
 
 diff <(cat rock.txt) <(ls -lh)
 ```
+# bash kodekloud
+```bash
+#!/bin/bash
+ssh tony@stapp01 -p 22
+sudo su
+groupadd nautilus_developers
+usermod -G nautilus_developers mohammed
+
+useradd -c "mohammed" -d /var/www/mohammed -s /bin/false mohammed
+
+grep mohammed /etc/passwd
+groups mohammed
+```

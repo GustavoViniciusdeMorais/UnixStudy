@@ -11,6 +11,10 @@
 - [Kungfu commands](./ubuntu/kungfu.md)
 - [Networking](./ubuntu/networking.md)
 
+## KodeKloud Devops
+- [Linux 1](./ubuntu/kodekloud/linux1.md)
+- [Devops 1](./ubuntu/kodekloud/devops1.md)
+
 ### Add current user permission to files in the folder
 ```sh
 sudo chown -R $USER:$USER .

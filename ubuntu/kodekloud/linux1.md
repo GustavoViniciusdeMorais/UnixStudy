@@ -27,3 +27,26 @@ grep -in ".*PermitRootLogin.*" /etc/ssh/sshd_config
 nano /etc/ssh/sshd_config
 systemctl restart sshd
 ```
+### user data transfer
+```bash
+find /source/dir -user rose -type f | tar -T - -cf - | (cd /dest/dir && tar -xvf -)
+# -T - : Read the file list from stdin (the | input)
+# -f - : Write archive to stdout (instead of a file)
+# echo "hello" | cat -
+# example: find . -user gustavo -type f | tar -cf compres -T -
+# creates the compres in the current dir with filtered files
+
+find . -user gustavo -type f | tar -cf compres -T -
+# -f compres : Save to file named compres (instead of stdout)
+# -T - : Read file list from stdin (the find output)
+
+cd receive/
+tar -xvf ../compres
+
+find . -user gustavo -type f | while read file; do echo $file; done
+```
+### file exec permissions
+```bash
+chmod 555 /tmp/xfusioncorp.sh
+bash /tmp/xfusioncorp.sh
+```

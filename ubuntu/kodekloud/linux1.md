@@ -22,7 +22,7 @@ chage -l kirsty
 ```bash
 cat /etc/os-release
 systemctl status sshd
-grep -in ".*PermitRootLogin.*" /etc/ssh/sshd_config
+grep -in ".*root.*" /etc/ssh/sshd_config
 # PermitRootLogin no
 nano /etc/ssh/sshd_config
 systemctl restart sshd

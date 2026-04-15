@@ -50,3 +50,9 @@ find . -user gustavo -type f | while read file; do echo $file; done
 chmod 555 /tmp/xfusioncorp.sh
 bash /tmp/xfusioncorp.sh
 ```
+### backup tar file
+```bash
+tar -cvf test.tar.gz dir/*
+mv test.tar.gz /home/test.tar.gz
+tar -t -f test.tar.gz
+```

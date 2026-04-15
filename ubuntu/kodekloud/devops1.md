@@ -18,7 +18,7 @@ yum search selinux | grep selinux
 
 yum update
 
-cd / && ls -l | grep selinux
+cd /etc && ls -l | grep selinux
 
 cd selinux
 

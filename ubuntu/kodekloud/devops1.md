@@ -1,4 +1,10 @@
 # Devops 1 kodekloud
+### servers
+```bash
+ssh tony@stapp01 -p 22
+ssh steve@stapp02 -p 22
+ssh banner@stapp03 -p 22
+```
 ```bash
 #!/bin/bash
 ssh tony@stapp01 -p 22

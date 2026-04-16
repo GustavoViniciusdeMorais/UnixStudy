@@ -36,3 +36,25 @@ nano config
 # SELINUX=disabled
 
 ```
+### simple cronjob
+```bash
+yum update -y && yum install cronie -y && systemctl start crond
+
+systemctl status crond
+
+crontab -e
+# press i, then press esc, then press :wq
+
+*/5 * * * * echo hello > /tmp/cron_text
+* * * * * echo $(date) >> /tmp/date.txt
+
+echo $(date) >> /tmp/date.txt
+
+crontab -l
+
+cat /tmp/cron_text
+cat /tmp/date.txt
+
+ssh steve@stapp02 -p 22 'cat /tmp/cron_text'
+
+```

@@ -75,3 +75,12 @@ cat > .ssh/authorized_keys
 ssh tony@stapp01 -p 22 # without password
 
 ```
+### install ansible
+```bash
+sudo su
+hostname && whoami
+pip3 install ansible==4.7.0
+# exit root
+ansible --version
+which ansible
+```

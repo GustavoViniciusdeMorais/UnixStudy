@@ -58,3 +58,20 @@ cat /tmp/date.txt
 ssh steve@stapp02 -p 22 'cat /tmp/cron_text'
 
 ```
+### ssh pub key login
+```bash
+
+ssh-keygen -t rsa
+pwd
+cat /home/thor/.ssh/id_rsa.pub
+
+ssh tony@stapp01 -p 22
+
+cd /home/tony
+mkdir .ssh
+cat > .ssh/authorized_keys
+# paste the pub key then typ Ctrl C
+
+ssh tony@stapp01 -p 22 # without password
+
+```

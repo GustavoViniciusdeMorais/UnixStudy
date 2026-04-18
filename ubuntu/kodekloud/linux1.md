@@ -59,3 +59,21 @@ tar -t -f test.tar.gz
 yum update -y && yum install file -y
 file test.tar.gz
 ```
+### linux acl file permissions
+Example Granting an additional user read access:<br/>
+setfacl -m u:lisa:r-- file <br/>
+```bash
+cd /etc/
+pwd
+ls -lha resolv.conf
+getfacl resolv.conf
+
+chown root:root resolv.conf
+chmod 644 resolv.conf
+
+setfacl -m u:siva:--- resolv.conf
+setfacl -m u:garrett:r-- resolv.conf
+
+getfacl resolv.conf
+
+```

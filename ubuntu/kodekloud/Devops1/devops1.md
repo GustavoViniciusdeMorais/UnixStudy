@@ -79,8 +79,16 @@ ssh tony@stapp01 -p 22 # without password
 ```bash
 sudo su
 hostname && whoami
-pip3 install ansible==4.7.0
+yum update -y
+pip3 install ansible==4.10.0
 # exit root
+
+echo 'export PATH=$PATH:/usr/local/bin' | sudo tee /etc/profile.d/custom_path.sh
+
+find / -type f -name ansible | grep ansible
+
+getfacl /usr/local/bin/ansible
+
 ansible --version
 which ansible
 ```

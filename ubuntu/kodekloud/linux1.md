@@ -52,7 +52,10 @@ bash /tmp/xfusioncorp.sh
 ```
 ### backup tar file
 ```bash
-tar -cvf test.tar.gz dir/*
+tar -czvf test.tar.gz dir/
 mv test.tar.gz /home/test.tar.gz
 tar -t -f test.tar.gz
+
+yum update -y && yum install file -y
+file test.tar.gz
 ```

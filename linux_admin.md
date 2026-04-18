@@ -12,6 +12,7 @@
 - [Networking](./ubuntu/networking.md)
 
 ## KodeKloud Devops
+- [lfcs essential cli](./ubuntu/lfcs_admin/essential_commands.md)
 - [Linux 1](./ubuntu/kodekloud/linux1.md)
 - [Devops 1](./ubuntu/kodekloud/Devops1/devops1.md)
 

@@ -92,3 +92,41 @@ getfacl /usr/local/bin/ansible
 ansible --version
 which ansible
 ```
+### mariadb service start
+```bash
+systemctl status mariadb
+
+journalctl -xeu mariadb.service | grep -in ".*mysql.*" | tail -20
+
+ls -lha /var/lib/ | grep mysql
+ls -lha /var/lib/mysql/
+
+getfacl /var/lib/mysql/
+
+rm -rf /var/lib/mysql/*
+mkdir /var/lib/mysql
+
+chown -R mysql:mysql /var/lib/mysql/
+
+systemctl restart mariadb
+
+# recreate the mysql folder and give permissions
+# did not worked
+# I had to reinstall the service
+
+yum update -y
+systemctl stop mariadb
+systemctl status mariadb
+yum remove -y mariadb mariadb-server
+systemctl status mariadb
+rm -rf /var/lib/mysql
+rm -f /etc/my.cnf
+
+yum install -y mariadb-server
+systemctl start mariadb
+systemctl enable mariadb
+systemctl status mariadb
+mariadb -u root -p
+
+ss -ntlp | grep db
+```

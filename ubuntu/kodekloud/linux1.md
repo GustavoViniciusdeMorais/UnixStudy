@@ -77,3 +77,19 @@ setfacl -m u:garrett:r-- resolv.conf
 getfacl resolv.conf
 
 ```
+### replace xml config string
+```bash
+whoami && hostname
+nano /root/nautilus.xml
+ls -lha /root/ && cd /root/
+
+cp nautilus.xml nautilus.xml.bkp
+
+sed -i.bkp 's/Random/Echo-Location/g' nautilus.xml
+grep -in ".*random.*" nautilus.xml.bkp
+grep -in ".*echo.*" nautilus.xml
+
+nano nautilus.xml
+nano nautilus.xml.bkp
+history | tail -30
+```

@@ -130,3 +130,27 @@ mariadb -u root -p
 
 ss -ntlp | grep db
 ```
+### linux bash script for backup
+```bash
+ssh banner@stapp03 -p 22
+sudo su
+yum update -y && yum install zip nano -y
+exit # exit sudo, the ssh key must be for common user
+
+cd /scripts
+nano media_backup.sh
+
+chmod +x media_backup.sh
+# in app server
+ssh-keygen -t rsa # do not add pass
+ssh-copy-id natasha@ststor01
+./media_backup.sh
+# in backup server
+ls -lh /backup
+```
+#### media_backup script
+```bash
+#!/bin/bash
+zip /backup/xfusioncorp_media.zip /var/www/html/media
+scp /backup/xfusioncorp_media.zip natasha@ststor01:/backup
+```

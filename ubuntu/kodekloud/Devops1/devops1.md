@@ -147,6 +147,7 @@ ssh-copy-id natasha@ststor01
 ./media_backup.sh
 # in backup server
 ls -lh /backup
+cat /home/natasha/.ssh/authorized_keys # will see banner
 ```
 #### media_backup script
 ```bash

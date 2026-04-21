@@ -13,8 +13,7 @@
 
 ## KodeKloud Devops
 - [lfcs essential cli](./ubuntu/lfcs_admin/essential_commands.md)
-- [Linux 1](./ubuntu/kodekloud/linux1.md)
-- [Devops 1](./ubuntu/kodekloud/Devops1/devops1.md)
+- [kodekloud main](./ubuntu/kodekloud/kodekloudmain.md)
 
 ### Add current user permission to files in the folder
 ```sh

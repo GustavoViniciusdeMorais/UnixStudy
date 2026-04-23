@@ -50,3 +50,23 @@ iptables -L
 
 systemctl status iptables
 ```
+### Config Iptables all app hosts
+```bash
+# get ip of LBR host
+ifconfig
+# On every app server
+yum update -y && yum install iptables -y && yum install iptables-services -y
+
+systemctl enable iptables
+systemctl start iptables
+systemctl status iptables
+
+iptables -A INPUT -p tcp -s stlb01 --dport 8088 -j ACCEPT
+iptables -A INPUT -p tcp --dport 8088 -j DROP
+iptables -D INPUT 4 # delete rule number if needed
+iptables -L INPUT --line-numbers -n -v
+
+iptables-save > /etc/sysconfig/iptables
+
+systemctl restart iptables
+```

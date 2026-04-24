@@ -63,10 +63,14 @@ systemctl status iptables
 
 iptables -A INPUT -p tcp -s stlb01 --dport 8088 -j ACCEPT
 iptables -A INPUT -p tcp --dport 8088 -j DROP
-iptables -D INPUT 4 # delete rule number if needed
+# delete rule number if needed
+iptables -D INPUT 5
 iptables -L INPUT --line-numbers -n -v
 
 iptables-save > /etc/sysconfig/iptables
 
 systemctl restart iptables
+
+# at load balancer host
+curl -m 5 stapp02:8088
 ```

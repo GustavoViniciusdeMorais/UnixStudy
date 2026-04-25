@@ -28,24 +28,18 @@ curl http://stapp01:8087
 systemctl status httpd
 
 ss -ntulp | grep 8087
-
 ls -lh /etc/ | grep mail
-
 cd /etc/mail
-
 ls -lh | grep ".*cf.*"
-
 grep -in ".*port.*" sendmail.cf
-
-nano sendmail.cf # line 272
+# edit line
+nano sendmail.cf 
 #port=28
 
 systemctl restart sendmail
-
 systemctl restart httpd
 
 iptables -I INPUT -p tcp -s 10.244.164.108 --dport 8087 -j ACCEPT
-
 iptables -L
 
 systemctl status iptables
@@ -73,4 +67,21 @@ systemctl restart iptables
 
 # at load balancer host
 curl -m 5 stapp02:8088
+```
+### Linux process troubleshooting
+```bash
+curl -m 5 stapp01:3001
+# at server
+ss -ntulp | grep 3001
+systemctl status httpd -l
+ls -lh /etc/ | grep mail
+cd /etc/mail
+ls -lh | grep ".*cf.*"
+grep -in ".*port.*" sendmail.cf
+# edit line
+nano sendmail.cf
+#port=28
+
+systemctl restart sendmail
+systemctl restart httpd
 ```

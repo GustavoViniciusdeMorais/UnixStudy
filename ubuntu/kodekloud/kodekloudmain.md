@@ -4,6 +4,11 @@
 ssh tony@stapp01 -p 22
 ssh steve@stapp02 -p 22
 ssh banner@stapp03 -p 22
+
+systemctl status [service]
+
+ss -ntulp | grep 8080
+
 ```
 - [lfcs essential cli](../lfcs_admin/essential_commands.md)
 - [Linux 1](./Linux/linux1.md)

@@ -90,17 +90,17 @@ systemctl restart httpd
 yum update -y && yum install nginx -y
 systemctl start nginx
 
-echo "Welcome!" > /usr/share/nginx/html/index.html
-
 cd /etc/nginx && grep -in ".*server.*" nginx.conf
-cd /etc/nginx && grep -in ".*root.*" nginx.conf
+grep -in ".*root.*" nginx.conf
+echo "Welcome!" > /usr/share/nginx/html/index.html
 # there is ssl config infos in nginx.conf
+
 mkdir certs && cd certs
 cp /tmp/nautilus.crt server.crt
 cp /tmp/nautilus.key server.key
-# add the ssl config in nginx
+# add the ssl config in nginx /etc/nginx/certs
 nginx -t
 systemctl restart nginx
 # at client
-curl -Ik https://stapp01
+curl -Ik https://stapp03
 ```

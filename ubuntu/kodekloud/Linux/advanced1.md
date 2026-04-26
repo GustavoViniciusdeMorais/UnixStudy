@@ -8,3 +8,9 @@ scp /tmp/nautilus.txt.gpg steve@stapp02:/home/web
 echo "user1name" >> /etc/cron.deny
 echo "user2name" >> /etc/cron.allow
 ```
+### gui booting default
+```bash
+systemctl get-default
+ls -lh /etc/systemd/system | grep -i ".*graph.*"
+systemctl set-default graphical.target
+```

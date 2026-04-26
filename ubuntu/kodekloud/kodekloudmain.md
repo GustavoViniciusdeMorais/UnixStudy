@@ -7,6 +7,9 @@ ssh banner@stapp03 -p 22
 
 systemctl status [service]
 
+yum install net-tools -y
+yum install nano -y
+
 ss -ntulp | grep 8080
 
 ```

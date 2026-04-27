@@ -104,3 +104,31 @@ systemctl restart nginx
 # at client
 curl -Ik https://stapp03
 ```
+### Nginx Load Balance
+```bash
+yum update -y && yum install nginx -y
+
+systemctl start nginx
+
+nano /etc/nginx/nginx.conf
+# add the upstream configs
+nginx -t
+
+systemctl restart nginx
+
+```
+#### Nginx upstream config
+```json
+http {
+    upstream app_servers {
+        server stapp01:8080;
+        server stapp02:8080;
+        server stapp03:8080;
+    }
+    server {
+        location / {
+            proxy_pass http://app_servers;
+        }
+    }
+}
+```

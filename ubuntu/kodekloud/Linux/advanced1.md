@@ -14,3 +14,9 @@ systemctl get-default
 ls -lh /etc/systemd/system | grep -i ".*graph.*"
 systemctl set-default graphical.target
 ```
+### Config timezone
+```bash
+timedatectl
+timedatectl list-timezones | grep "Asia/Kathmandu"
+timedatectl set-timezone Asia/Kathmandu
+```

@@ -106,6 +106,10 @@ curl -Ik https://stapp03
 ```
 ### Nginx Load Balance
 ```bash
+# discover the service port at app host
+grep ".*Listen.*" /etc/httpd/conf/httpd.conf
+
+# config nginx at load balance host
 yum update -y && yum install nginx -y
 
 systemctl start nginx
@@ -116,14 +120,16 @@ nginx -t
 
 systemctl restart nginx
 
+# at jum host
+curl -Ik http://stlb01:80
 ```
 #### Nginx upstream config
 ```json
 http {
     upstream app_servers {
-        server stapp01:8080;
-        server stapp02:8080;
-        server stapp03:8080;
+        server stapp01:3004;
+        server stapp02:3004;
+        server stapp03:3004;
     }
     server {
         location / {

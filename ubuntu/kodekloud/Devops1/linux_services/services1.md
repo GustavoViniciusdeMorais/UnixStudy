@@ -143,7 +143,7 @@ http {
 # in database server
 grep ".*postgre.*" /etc/passwd
 sudo -u postgres psql
-CREATE USER kodekloud_aim WITH PASSWORD 'Rc5C9EyvbU';
+CREATE USER kodekloud_aim WITH PASSWORD '';
 CREATE DATABASE kodekloud_db10;
 GRANT ALL PRIVILEGES ON DATABASE kodekloud_db10 TO kodekloud_aim;
 ```

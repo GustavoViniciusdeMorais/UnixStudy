@@ -20,3 +20,12 @@ timedatectl
 timedatectl list-timezones | grep "Asia/Kathmandu"
 timedatectl set-timezone Asia/Kathmandu
 ```
+### Firewalld
+```bash
+yum update -y && yum install net-tools -y && yum install firewalld -y
+systemctl start firewalld
+firewall-cmd --zone=public --add-port=8086/tcp --permanent
+firewall-cmd --reload
+firewall-cmd --zone=public --list-ports
+curl -Ik localhost:8086
+```

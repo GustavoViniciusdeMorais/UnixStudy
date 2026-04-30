@@ -10,7 +10,6 @@ systemctl start httpd
 # the php script will connect
 ```
 ### Config MariaDB
-This task 
 ```bash
 yum update -y && yum install mariadb-server -y
 systemctl enable mariadb.service

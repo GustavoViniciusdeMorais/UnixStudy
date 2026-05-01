@@ -20,3 +20,14 @@ CREATE USER 'kodekloud_rin'@'localhost' IDENTIFIED BY 'BruCStnMT5';
 GRANT ALL PRIVILEGES ON kodekloud_db10.* TO 'kodekloud_rin'@'localhost' IDENTIFIED BY 'BruCStnMT5';
 FLUSH PRIVILEGES;
 ```
+### Config Sample WebPages Apache
+```bash
+# at jump host
+scp -r news steve@stapp02:/home/steve/
+curl -L http://stapp02:8083/news
+# at app host
+yum update -y && yum install httpd -y
+sed -i.bkp 's/Listen 80/Listen 8083/g' /etc/httpd/conf/httpd.conf
+systemctl restart httpd
+mv * /var/www/html/
+```

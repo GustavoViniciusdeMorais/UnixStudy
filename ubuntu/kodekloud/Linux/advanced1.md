@@ -29,3 +29,13 @@ firewall-cmd --reload
 firewall-cmd --zone=public --list-ports
 curl -Ik localhost:8086
 ```
+### Limit user qty number processes
+```bash
+grep nfsuser /etc/passwd
+nano /etc/security/limits.conf
+# in file add lines
+nfsuser soft nproc 1026
+nfsuser hard nproc 2024
+
+sudo -u nfsuser ulimit -u
+```

@@ -48,7 +48,6 @@ dnf install -y php php-cli php-fpm php-mysqlnd php-gd php-xml php-mbstring
 php -v
 
 systemctl enable --now php-fpm
-nano /etc/php-fpm.d/www.conf
 
 grep -in ".*listen.*" /etc/php-fpm.d/www.conf
 nano /etc/php-fpm.d/www.conf

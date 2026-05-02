@@ -20,4 +20,6 @@ ss -ntulp | grep 8080
 - [Linux 1](./Linux/linux1.md)
     - [Advanced1](./Linux/advanced1.md)
 - [Devops 1](./Devops1/devops1.md)
-    - [Linux Services](./Devops1/linux_services/services1.md)
+    - [Services 1](./Devops1/linux_services/services1.md)
+    - [Services 2](./Devops1/linux_services/web_services.md)
+    - [Git 1](./Devops1/git_tasks/git1.md)

@@ -152,3 +152,13 @@ port: 5000
 targetPort: 5000
 '''
 ```
+### MySQL Deploy [config](./mysql.yml)
+```bash
+# bas64 encode all secretes before add in yml file
+# the value goes in the kind: Secret data section
+echo -n 'YUIidhb667' | base64
+echo -n 'kodekloud_joy' | base64
+echo -n 'LQfKeWWxWD' | base64
+echo -n 'kodekloud_db4' | base64
+k apply -f mysql.yml
+```

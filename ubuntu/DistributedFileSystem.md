@@ -80,6 +80,7 @@ version: '3.8'
 services:
   gluster1:
     image: gluster/gluster-centos:latest
+    container_name: gluster1
     privileged: true
     volumes:
       - ./data1:/data
@@ -88,6 +89,7 @@ services:
 
   gluster2:
     image: gluster/gluster-centos:latest
+    container_name: gluster2
     privileged: true
     volumes:
       - ./data2:/data

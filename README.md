@@ -10,6 +10,7 @@
 - [Admin tips](./ubuntu/linux_commands.md)
 - [Kungfu commands](./ubuntu/kungfu.md)
 - [Networking](./ubuntu/networking.md)
+- [DistributedFileSystem](./ubuntu/DistributedFileSystem.md)
 - [Third party repo etc sources](./ubuntu/third_part_repos.md)
 
 ## KodeKloud Devops

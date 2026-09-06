@@ -27,3 +27,4 @@ ss -ntulp | grep 8080
     - [Git](./Devops1/git_tasks/git1.md)
     - [Docker 1](./Devops1/docker_tasks/docker1.md)
     - [Kubernetes](./Devops1/k8s/kubernetes.md)
+    - [CI CD](./Devops1/cicd/jenkins.md)

@@ -22,3 +22,8 @@ cat /var/lib/jenkins/secrets/initialAdminPassword
 # The next steps are in the jenkins UI
 
 ```
+### Job Install Package
+```bash
+# UI create the $PACKAGE variable for the job
+sshpass -p '' ssh -o StrictHostKeyChecking=no natasha@ststor01 echo " 'password' | sudo -S yum install -y $PACKAGE"
+```
